@@ -1,1 +1,43 @@
 @charset "UTF-8";
+
+:root{
+    /*Colors*/
+    --co-Primary-red: hsl(0, 78%, 62%);
+    --co-Primary-cyan: hsl(180, 62%, 55%);
+    --co-Primary-orange: hsl(34, 97%, 64%);
+    --co-Primary-blue: hsl(212, 86%, 64%);
+    --co-Neutral-very-dark-blue: hsl(234, 12%, 34%);
+    --co-Neutral-grayish-blue: hsl(229, 6%, 66%);
+    --co-Neutral-very-light-gray: hsl(0, 0%, 98%);
+    --co-Footer-link-blue: hsl(228, 45%, 44%);
+    /*Fonts*/
+    --ff-Poppins-Regular: "Poppins", sans-serif;
+    --fs-12: 1.2rem;
+    --fs-15: 1.5rem;
+    --fw-Light: 200;
+    --fw-Regular: 400;
+    --fw-Bold: 600;
+    --fy-Style-normal: normal;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--ff-Poppins-Regular);
+    font-weight: var(--fw-Regular);
+    font-size: var(--fs-15);
+    font-style: var(--fy-Style-normal);
+    background-color: var(--co-Neutral-very-light-gray);
+    color: var(--co-Neutral-grayish-blue);
+}
+

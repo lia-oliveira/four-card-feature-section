@@ -9,16 +9,17 @@
     --co-Primary-cyan: hsl(180, 62%, 55%);
     --co-Primary-orange: hsl(34, 97%, 64%);
     --co-Primary-blue: hsl(212, 86%, 64%);
+    --co-Primary-blue-shadow: hsla(212, 86%, 64%, 10%);
     --co-Neutral-very-dark-blue: hsl(234, 12%, 34%);
     --co-Neutral-grayish-blue: hsl(229, 6%, 66%);
     --co-Neutral-very-light-gray: hsl(0, 0%, 98%);
     --co-Footer-link-blue: hsl(228, 45%, 44%);
     /*Fonts*/
     --ff-Poppins-Regular: "Poppins", sans-serif;
-    --fs-12: 1.2rem;
-    --fs-15: 1.5rem;
-    --fs-20: 2rem;
-    --fs-24: 2.4rem;
+    --fs-12: 0.8rem;
+    --fs-15: 1rem;
+    --fs-20: 1.333rem;
+    --fs-24: 1.6rem;
     --fw-Light: 200;
     --fw-Regular: 400;
     --fw-Bold: 600;
@@ -32,7 +33,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 93.75%;
 }
 
 html, body {
@@ -52,7 +53,6 @@ body {
     background-color: var(--co-Neutral-very-light-gray);
     color: var(--co-Neutral-grayish-blue);
 }
-
 /* =====================================
             TEXT STYLES
 =======================================*/
@@ -67,7 +67,7 @@ body {
     font-weight: var(--fw-Bold);
     font-size: var(--fs-24);
     color:var(--co-Neutral-very-dark-blue);
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.1rem;
 }
 
 .main-header p:nth-of-type(3) {
@@ -78,16 +78,20 @@ body {
 .card__title {
     font-family: var(--ff-Poppins-Regular);
     font-weight: var(--fw-Bold);
-    font-size: var(--fs-24);
+    font-size: var(--fs-20);
     color: var(--co-Neutral-very-dark-blue);
 }
 
+.card__description {
+    font-size: var(--fs-12);
+}
+
 /* =====================================
-         CONTAINERS STYLES
+         CONTAINER's STYLES
 =======================================*/
 
 main {
-    margin: 3.4rem;
+    margin: 5.5rem 2.133rem 0 2.133rem;
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -99,6 +103,7 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 5.8rem;
 }
 
 .cards {
@@ -111,8 +116,10 @@ main {
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
-    background-color: azure;
-    box-shadow: 1px 10px 20px var(--co-Neutral-very-light-gray);
+    background-color: var(--co-Neutral-very-light-gray);
+    box-shadow: 5px 10px 20px var(--co-Primary-blue-shadow);
+    padding: 1rem 1.866rem 6rem 1.866rem;
+    position: relative;
 }
 
 .card--cyan {
@@ -130,3 +137,22 @@ main {
 .card--blue {
     border-top: 3px solid var(--co-Primary-blue);
 }
+
+/* =====================================
+                ICONS
+=======================================*/
+
+.card__description[data-icon="supervisor"]::after {
+    content: "";
+	background-image: url('./../images/icon-supervisor.svg');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+	width: 64px;
+	height: 64px;
+    position: absolute;
+    right: 3rem;
+    top: calc(60% + 0.5rem);
+}
+
+

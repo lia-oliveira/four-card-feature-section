@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* =====================================
+               Global
+=======================================*/
 :root{
     /*Colors*/
     --co-Primary-red: hsl(0, 78%, 62%);
@@ -14,6 +17,8 @@
     --ff-Poppins-Regular: "Poppins", sans-serif;
     --fs-12: 1.2rem;
     --fs-15: 1.5rem;
+    --fs-20: 2rem;
+    --fs-24: 2.4rem;
     --fw-Light: 200;
     --fw-Regular: 400;
     --fw-Bold: 600;
@@ -41,3 +46,49 @@ body {
     color: var(--co-Neutral-grayish-blue);
 }
 
+/* =====================================
+            TEXT STYLES
+=======================================*/
+
+.main-header p:nth-of-type(1) {
+    font-weight: var(--fw-Light);
+    font-size: var(--fs-24);
+}
+
+.main-header p:nth-of-type(2) {
+    font-weight: var(--fw-Bold);
+    font-size: var(--fs-24);
+    color:var(--co-Neutral-very-dark-blue);
+}
+
+.main-header p:nth-of-type(3) {
+    font-weight: var(--fw-Light);
+    font-size: var(--fs-15);
+}
+
+.card__title {
+    font-family: var(--ff-Poppins-Regular);
+    font-weight: var(--fw-Bold);
+    font-size: var(--fs-24);
+    color: var(--co-Neutral-very-dark-blue);
+}
+
+/* =====================================
+         CONTAINERS STYLES
+=======================================*/
+
+main {
+    margin: 0 46px;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    width: 310px; /*310*/
+    height: 220px;
+    border-radius: 5px;
+    box-shadow: 1px 10px 60px var(--co-Neutral-very-dark-blue);
+}

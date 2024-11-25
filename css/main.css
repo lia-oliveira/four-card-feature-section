@@ -9,7 +9,7 @@
     --co-Primary-cyan: hsl(180, 62%, 55%);
     --co-Primary-orange: hsl(34, 97%, 64%);
     --co-Primary-blue: hsl(212, 86%, 64%);
-    --co-Primary-blue-shadow: hsla(212, 86%, 64%, 10%);
+    --co-Primary-blue-shadow: hsla(212, 86%, 64%, 20%);
     --co-Neutral-very-dark-blue: hsl(234, 12%, 34%);
     --co-Neutral-grayish-blue: hsl(229, 6%, 66%);
     --co-Neutral-very-light-gray: hsl(0, 0%, 98%);
@@ -54,7 +54,7 @@ body {
     color: var(--co-Neutral-grayish-blue);
 }
 /* =====================================
-            TEXT STYLES
+            TEXT
 =======================================*/
 
 .main-header p:nth-of-type(1) {
@@ -80,22 +80,39 @@ body {
     font-weight: var(--fw-Bold);
     font-size: var(--fs-20);
     color: var(--co-Neutral-very-dark-blue);
+    margin-bottom: 0.5rem;
 }
 
 .card__description {
     font-size: var(--fs-12);
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top:2rem;
+}
+.attribution {
+    font-size: var(--fs-12);
+    color: var(--co-Neutral-grayish-blue);
+    text-align: center;
+}
+
+.attribution a {
+    color: var(-co-Footer-link-blue);
 }
 
 /* =====================================
-         CONTAINER's STYLES
+             CONTAINER
 =======================================*/
 
 main {
-    margin: 5.5rem 2.133rem 0 2.133rem;
+    margin: 5.5rem 2.26rem 0 2.26rem;
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .main-header {
@@ -103,22 +120,23 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 5.8rem;
+    margin-bottom: 5.6rem;
 }
 
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 3.4rem;
+    gap: 1.8rem;
 }
 
 .card {
+    max-width: 24rem;
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
     background-color: var(--co-Neutral-very-light-gray);
     box-shadow: 5px 10px 20px var(--co-Primary-blue-shadow);
-    padding: 1rem 1.866rem 6rem 1.866rem;
+    padding: 0.4rem 1.866rem 7.5rem 1.866rem;
     position: relative;
 }
 
@@ -152,7 +170,45 @@ main {
 	height: 64px;
     position: absolute;
     right: 3rem;
-    top: calc(60% + 0.5rem);
+    top: calc(55% + 0.5rem);
 }
 
 
+.card__description[data-icon="team-builder"]::after {
+    content: "";
+	background-image: url('./../images/icon-team-builder.svg');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+	width: 64px;
+	height: 64px;
+    position: absolute;
+    right: 3rem;
+    top: calc(55% + 0.5rem);
+}
+
+.card__description[data-icon="karma"]::after {
+    content: "";
+	background-image: url('./../images/icon-karma.svg');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+	width: 64px;
+	height: 64px;
+    position: absolute;
+    right: 3rem;
+    top: calc(55% + 0.5rem);
+}
+
+.card__description[data-icon="calculator"]::after {
+    content: "";
+	background-image: url('./../images/icon-calculator.svg');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+	width: 64px;
+	height: 64px;
+    position: absolute;
+    right: 3rem;
+    top: calc(55% + 0.5rem);
+}

@@ -37,7 +37,7 @@ My solution:
 ### Links
 
 - Solution URL: [Four Card Feature Section Repo](https://github.com/lia-oliveira/four-card-feature-section)
-- Live Site URL: [Four Card Feature Section Live](https://your-live-site-url.com)
+- Live Site URL: [Four Card Feature Section Live](https://four-card-feature-section-brown-theta.vercel.app/)
 
 ## My process
 

@@ -58,20 +58,20 @@ body {
             TEXT
 =======================================*/
 
-.main-header p:nth-of-type(1) {
+.main-header__subtitle {
     font-weight: var(--fw-Light);
     font-size: var(--fs-24);
     color: var(--co-Neutral-grayish-blue);
 }
 
-.main-header p:nth-of-type(2) {
+.main-header__title {
     font-weight: var(--fw-Bold);
     font-size: var(--fs-24);
     color:var(--co-Neutral-very-dark-blue);
     margin-bottom: 1.1rem;
 }
 
-.main-header p:nth-of-type(3) {
+.main-header p {
     font-weight: var(--fw-Regular);
     font-size: var(--fs-15);
 }
@@ -142,19 +142,19 @@ body {
     position: relative;
 }
 
-.card--cyan {
+.card--1 {
     border-top: 3px solid var(--co-Primary-cyan);
 }
 
-.card--red {
+.card--2 {
     border-top: 3px solid var(--co-Primary-red);
 }
 
-.card--orange {
+.card--3 {
     border-top: 3px solid var(--co-Primary-orange);
 }
 
-.card--blue {
+.card--4 {
     border-top: 3px solid var(--co-Primary-blue);
 }
 
@@ -232,12 +232,14 @@ body {
         padding: 0rem;
     }
 
-    .main-header p:nth-of-type(1) {
+    .main-header__subtitle {
         font-size: var(--fs-36);
+        margin: 0;
     }
 
-    .main-header p:nth-of-type(2) {
+    .main-header__title {
         font-size: var(--fs-36);
+        margin: 0;
     }
 
     .cards {
@@ -245,16 +247,14 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 1.5rem;
-        margin-top: 0rem;
+        gap: 1rem;
+        margin: 1rem 2.26rem;
     }
 
     .card {
         height: 16.88rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
-
+        background-color: #FFF;
     }
 
     .card--1 {
@@ -265,10 +265,14 @@ body {
 
     .card--2 {
         grid-column: 2 / 3;
+        grid-row: 1/2;
+
     }
 
     .card--3 {
         grid-column: 2 / 3;
+        grid-row: 2/3;
+
     }
 
     .card--4 {

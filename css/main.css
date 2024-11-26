@@ -20,6 +20,7 @@
     --fs-15: 1rem;
     --fs-20: 1.333rem;
     --fs-24: 1.6rem;
+    --fs-36: 2.4rem;
     --fw-Light: 200;
     --fw-Regular: 400;
     --fw-Bold: 600;
@@ -91,21 +92,21 @@ body {
 .footer {
     margin-top:2rem;
 }
-.attribution {
+.footer__attribution {
     font-size: var(--fs-12);
     color: var(--co-Neutral-grayish-blue);
     text-align: center;
 }
 
-.attribution a {
+.footer__attribution a {
     color: var(-co-Footer-link-blue);
 }
 
 /* =====================================
-             CONTAINER
+             CONTAINERS
 =======================================*/
 
-main {
+.main {
     margin: 5.5rem 2.26rem 0 2.26rem;
     min-height: 100%;
     display: grid;
@@ -116,6 +117,7 @@ main {
 }
 
 .main-header {
+    max-width: 36rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +175,6 @@ main {
     top: calc(55% + 0.5rem);
 }
 
-
 .card__description[data-icon="team-builder"]::after {
     content: "";
 	background-image: url('./../images/icon-team-builder.svg');
@@ -211,4 +212,77 @@ main {
     position: absolute;
     right: 3rem;
     top: calc(55% + 0.5rem);
+}
+/* =====================================
+                MEDIA QUERiES
+=======================================*/
+
+@media (min-width: 600px) {
+
+    body {
+        position: relative;
+    }
+
+    .main {
+        margin: 0rem;
+    }
+
+    .main-header {
+        margin: 0rem;
+        padding: 0rem;
+    }
+
+    .main-header p:nth-of-type(1) {
+        font-size: var(--fs-36);
+    }
+
+    .main-header p:nth-of-type(2) {
+        font-size: var(--fs-36);
+    }
+
+    .cards {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 0rem;
+    }
+
+    .card {
+        height: 16.88rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .card--1 {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+
+    .card--2 {
+        grid-column: 2 / 3;
+    }
+
+    .card--3 {
+        grid-column: 2 / 3;
+    }
+
+    .card--4 {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+
+    .footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        text-align: center;
+    }
+
 }

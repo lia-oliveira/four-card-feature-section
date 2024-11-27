@@ -58,13 +58,13 @@ body {
             TEXT
 =======================================*/
 
-.main-header__subtitle {
+.main-header__title {
     font-weight: var(--fw-Light);
     font-size: var(--fs-24);
     color: var(--co-Neutral-grayish-blue);
 }
 
-.main-header__title {
+.main-header__title--strong {
     font-weight: var(--fw-Bold);
     font-size: var(--fs-24);
     color:var(--co-Neutral-very-dark-blue);
@@ -232,12 +232,12 @@ body {
         padding: 0rem;
     }
 
-    .main-header__subtitle {
+    .main-header__title {
         font-size: var(--fs-36);
         margin: 0;
     }
 
-    .main-header__title {
+    .main-header__title--strong{
         font-size: var(--fs-36);
         margin: 0;
     }

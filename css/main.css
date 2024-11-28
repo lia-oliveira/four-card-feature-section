@@ -58,20 +58,20 @@ body {
             TEXT
 =======================================*/
 
-.main-header__title {
+.main-header__narrow{
     font-weight: var(--fw-Light);
     font-size: var(--fs-24);
     color: var(--co-Neutral-grayish-blue);
 }
 
-.main-header__title--strong {
+.main-header__title {
     font-weight: var(--fw-Bold);
     font-size: var(--fs-24);
     color:var(--co-Neutral-very-dark-blue);
     margin-bottom: 1.1rem;
 }
 
-.main-header p {
+.main-header__content {
     font-weight: var(--fw-Regular);
     font-size: var(--fs-15);
 }
@@ -232,12 +232,12 @@ body {
         padding: 0rem;
     }
 
-    .main-header__title {
+    .main-header__narrow {
         font-size: var(--fs-36);
         margin: 0;
     }
 
-    .main-header__title--strong{
+    .main-header__title{
         font-size: var(--fs-36);
         margin: 0;
     }
